@@ -3,7 +3,7 @@ FROM python:3.9
 RUN mkdir logmanagement
 RUN mkdir app
 
-
+WORKDIR /logmanagement/app
 
 ENV PATH="${PATH}:/root/.local/bin"
 ENV PYTHONPATH=.
@@ -12,4 +12,4 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-COPY logmanagement/ logmanagement/
+COPY logmanagement/app/ logmanagement/app/

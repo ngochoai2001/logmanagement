@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 
-WORKDIR /log-vue-front/logmanagement/app
+WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH app/node_modules/.bin:$PATH
 
 RUN npm install @vue/cli@5.0.8 -g
 

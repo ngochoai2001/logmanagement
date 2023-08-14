@@ -35,11 +35,20 @@ const actions = {
   },
   // eslint-disable-next-line no-empty-pattern
   async updateLog({}, log) {
-    await axios.patch(`log/${log._id}`, log.form);
+    await axios.patch(`logs/${log._id}`, log.form,
+    {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
+    });
   },
   // eslint-disable-next-line no-empty-pattern
   async deleteLog({}, logId) {
-    await axios.delete(`log/${logId}`);
+    await axios.delete(`logs/${logId}`,{
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
+    });
   }
 };
 
