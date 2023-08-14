@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  backend: 
+    build: ./log-fastapi-back
+    ports:
+      -5000:5000
+    volumes:
+      -./log-fastapi-back/logmanagement:/app
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 5000
+  frontend:
+    build: ./log-vue-front
+    volumes:
+      - './log-vue-front/logmanagement:/app'
+      - '/app/node_modules'
+    ports:
+      - 8080:8080

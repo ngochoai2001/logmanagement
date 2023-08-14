@@ -1,0 +1,33 @@
+---------------------Chương trình quản lý logs-------------------------
+front-end: Vue-Js 3, bootstrap
+back-end: bất kỳ ưu tiên fast api
+database: bất kỳ ưu tiên mongodb
+----------------------document log----------------------------
+system_subscribe|	Hệ thống:	IMS
+department_name	|	Đơn vị khai thác:	N/A
+personal_name	|	Đầu mối khai thác:	N/A
+name			|	Log Name:	API lấy danh sách thẻ trên QLTS theo dự án
+open_date		|	Open request time:	2023-07-05 14:33:20.684651
+respond_time	|	Respond time (ms):	22.151
+remote_addr		|	IP request:	10.165.16.21
+return_date		|	Return request time:	2023-07-05 14:33:20.706802
+remote_port		|	Port request:	52242
+path_info		|	Path info:	/api/v1/get_data_the_in_project
+content_length	|	Content length:	400
+remote_port		|	Server port:	33541
+p_request_method|	Request method:	POST
+content_type	|	Content type:	multipart/form-data; 
+
+server_name		|	Server name:	127.0.0.1
+server_protocol	|	Server protocol:	HTTP/1.1
+access_token	|	Access token:	c0d002b1b79d48ce923facbb3953e81b
+function_name	|	Function name:	get_data_the_in_project
+http_user_agent	|	Http user agent:	RestSharp/105.2.3.0
+query_string 	|	Query string:	{"access_token": "c0d002b1b79d48ce923facbb3953e81b", "project_code": "010P230031VT9", "so_the": ""}
+msg 			|	Note:	Thành công
+-------------------------Yêu cầu chức năng-------------------
++ Login authentication bằng JWT
++ CURD log sử dụng API
++ Tách backend và front-end thành 2 project riêng
++ Build dockerimage và run front-end trên docker container
+--------------------------------------------------------------
