@@ -1,0 +1,22 @@
+{
+  "system_subscribe": "IMS",
+  "department_name": "string",
+  "personal_name": "string",
+  "name": "API lấy danh sách thẻ trên QLTS theo dự á",
+  "open_date": "2023-07-24T20:13:52.608Z",
+  "respond_time": "22.552",
+  "remote_addr": "10.165.16.21",
+  "return_date": "2023-07-24T20:13:52.608Z",
+  "remote_port": 0,
+  "path_info": "string",
+  "content_length": 33541,
+  "p_request_method": "POST",
+  "content_type": "multipart/form-data; ",
+  "server_name": "127.0.0.1",
+  "server_protocol": "HTTP/1.1",
+  "access_token": "c0d002b1b79d48ce923facbb3953e81b",
+  "function_name": "get_data_the_in_project",
+  "http_user_agent": "RestSharp/105.2.3.0",
+  "query_string": "{"access_token": "c0d002b1b79d48ce923facbb3953e81b", "project_code": "010P230031VT9", "so_the": ""}",
+  "msg": "Thành công"
+}
