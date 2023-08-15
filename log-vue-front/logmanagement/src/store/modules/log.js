@@ -11,7 +11,11 @@ const getters = {
 
 const actions = {
   async createLog({dispatch}, log) {
-    await axios.post('logs', log);
+    await axios.post('logs/', log,  {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`
+      }
+    });
     await dispatch('getLogs');
   },
   async getLogs({commit}) {
@@ -35,7 +39,7 @@ const actions = {
   },
   // eslint-disable-next-line no-empty-pattern
   async updateLog({}, log) {
-    await axios.patch(`logs/${log._id}`, log.form,
+    await axios.put(`logs/${log.logId}/`, log.form,
     {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
@@ -44,7 +48,7 @@ const actions = {
   },
   // eslint-disable-next-line no-empty-pattern
   async deleteLog({}, logId) {
-    await axios.delete(`logs/${logId}`,{
+    await axios.delete(`logs/${logId}/`,{
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
       }

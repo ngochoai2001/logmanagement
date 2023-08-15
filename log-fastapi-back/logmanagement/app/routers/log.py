@@ -40,7 +40,7 @@ async def insert_new_log(log: Log):
 async def update_a_log(logID, log:Log):
     log = logs_db.find_one({"_id": ObjectId(logID)})
     if(log):
-        logs_db.update_one({"_id": logID}, log_serializer(log))
+        logs_db.update_one({"_id": logID},{'$set': log_serializer(log)})
     else:
         raise HTTPException(status_code=404, detail="Log not found")
 

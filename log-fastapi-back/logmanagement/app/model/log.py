@@ -12,7 +12,7 @@ class Log(BaseModel):
     remote_port		:	int
     path_info		:	str
     content_length	:	int
-    remote_port		:	int
+    server_port		:	int
     p_request_method:	str
     content_type	:	str 
     server_name		:	str

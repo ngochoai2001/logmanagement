@@ -15,7 +15,7 @@ def log_serializer(log: Log) -> dict:
         "return_date":	log["return_date"],
         "remote_port":	log["remote_port"],
         "path_info":	log["path_info"],        
-        "remote_port":	log["remote_port"],        
+        "server_port":	log["server_port"],        
         "p_request_method":	log["p_request_method"],        
         "content_type":	log["content_type"],        
         "server_name":	log["server_name"],        
