@@ -37,10 +37,11 @@ async def insert_new_log(log: Log):
     }
 
 @logRouter.put("/logs/{logId}/", tags = ["logs"],dependencies=[Depends(JWTBearer())])
-async def update_a_log(logID, log:Log):
-    log = logs_db.find_one({"_id": ObjectId(logID)})
+async def update_a_log(logId, logIn:Log):
+    print(logIn)
+    log = logs_db.find_one({"_id": ObjectId(logId)})
     if(log):
-        logs_db.update_one({"_id": logID},{'$set': log_serializer(log)})
+        logs_db.update_one({"_id": ObjectId(logId)},{'$set': dict(logIn)})
     else:
         raise HTTPException(status_code=404, detail="Log not found")
 

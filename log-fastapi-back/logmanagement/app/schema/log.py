@@ -18,10 +18,12 @@ def log_serializer(log: Log) -> dict:
         "server_port":	log["server_port"],        
         "p_request_method":	log["p_request_method"],        
         "content_type":	log["content_type"],        
+        "content_length":	log["content_length"],        
         "server_name":	log["server_name"],        
         "server_protocol":	log["server_protocol"],        
         "access_token":	log["access_token"],        
         "http_user_agent":	log["http_user_agent"],        
+        "function_name":	log["function_name"],        
         "query_string":	log["query_string"],        
         "msg":	log["msg"]                   
     }
