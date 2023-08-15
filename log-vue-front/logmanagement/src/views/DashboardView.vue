@@ -57,7 +57,7 @@
         </div>
         <div class="mb-3">
           <label for="p_request_method" class="form-label">Request method</label>
-          <input type="number" min="0" name="p_request_method" v-model="form.p_request_method" class="form-control">
+          <input name="p_request_method" v-model="form.p_request_method" class="form-control">
         </div>
         <div class="mb-3">
           <label for="content_type" class="form-label">Content type</label>
